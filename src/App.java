@@ -1,13 +1,15 @@
 class Frog {
-	String name;
-	int age;
+	private String name; //instance variable
+	private int age;
+	//private enforces encapsulation by requiring access exclusively to Frog class
 
-	public void setName(String newName){
-		name = newName;
+	public void setName(String name){
+		//name = newName;  <--local variable that was used above earlier in setName parameter
+		this.name = name; //this.name refers to name instance variable and setting it = to local name variable
 	}
 	
-	public void setAge(int newAge){
-		age = newAge;
+	public void setAge(int age){
+		this.age = age;
 	}
 
 	public String getName(){
